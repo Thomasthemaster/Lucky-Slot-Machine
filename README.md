@@ -5,7 +5,7 @@ A lucky slot machine using four LEDs, a passive buzzer, and a pushbutton.
 
 ## 🚀 How It Works
 
-The LEDs and buzzer flash and tone. When it's finished, the player must replicate the exact pattern using the pushbuttons. The Arduino randomly chooses the pattern in which the LEDs flash, and each LED has a unique tone. If the player fails to replicate the pattern, they must start over. If they reach the maximum number of levels, they win.
+When the button is pressed, the lights flash up randomly. They start flashing slowly until they stop completely. The end result can be considered a "win" if 3 lights next to each other are on or all four are on. The code does not rig the machine, rather it uses random seeds from an unused pin to decide which lights to turn on.
 
 ### Hardware
 - **Development Board:** Arduino Nano
@@ -85,9 +85,7 @@ Watch the project in action + an explanation of the build:
 
 ## 💡 What I Learned
 
-I learned to go back and make my games playable. Since my original code contained 100 max levels of play, which is nearly impossible, I had to go back and reduce it to a manageable amount. Therefore, I think this project has demonstrated my ability to go back and reanalyze my build.
-
-I also learned how to amplify buzzer sound; with an S8050 transistor, 1KΩ Resistor, and a IN4001 Diode. Before, I thought the sound of my passive buzzer was too small, so using the components in my kit, I was able to conjure up this sound amplifier that now makes the buzzer sound way louder.
+I practiced my ability to use the sound-amplification circuit to amplify sound of the buzzer. It uses a transistor & diode, and allows amplified sound with the **same buzzer**.
 
 ---
 
